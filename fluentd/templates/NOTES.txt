@@ -1,0 +1,4 @@
+1. To verify that Fluentd has started, run:
+  
+
+kubectl --namespace={{ .Release.Namespace }} get pods -l "app.kubernetes.io/name={{ include "fluentd.name" . }},app.kubernetes.io/instance={{ .Release.Name }}"
